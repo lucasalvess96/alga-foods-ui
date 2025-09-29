@@ -1,5 +1,33 @@
 # AlgaFoodsUi
 
+# Pacote de instalações
+
+ng new name-app
+
+## Angular material
+
+ng add @angular/material
+definir o padrao de estilo em style.scss raiz
+
+## Ngx-mask
+
+npm install --save ngx-mask
+
+## Ngx-toastr
+
+npm install ngx-toastr
+
+## Cypress
+
+npm install --save-dev cypress
+npx cypress open
+
+## Google icon index.html
+
+googleapis
+
+## Versão do angular
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
 
 ## Development server
