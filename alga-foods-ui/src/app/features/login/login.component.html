@@ -1,10 +1,37 @@
-<button
-  type="button"
-  mat-flat-button
-  color="primary"
-  routerLink="/welcome"
-  routerLinkActive="active"
-  ariaCurrentWhenActive="page"
->
-  WELCOME
-</button>
+<main class="content">
+  <div class="login-container">
+    <header class="app-description">
+      <div class="logo-icon">🍴</div>
+      FoodiesApp
+    </header>
+
+    <section class="section-welcome">
+      <h1>Bem-vindo ao FoodiesApp</h1>
+      <p>Peça sua comida favorita em poucos cliques</p>
+    </section>
+
+    <section class="google-login">
+      <button type="button" class="google-btn">
+        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" class="google-icon" />
+        Entrar com Google
+      </button>
+    </section>
+
+    <footer class="terms">
+      Ao continuar, você concorda com nossos
+      <a href="#">Termos</a> e <a href="#">Política de Privacidade</a>.
+    </footer>
+
+    <button
+      class="btn-back"
+      type="button"
+      mat-flat-button
+      color="primary"
+      routerLink="/welcome"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      Angular
+    </button>
+  </div>
+</main>
