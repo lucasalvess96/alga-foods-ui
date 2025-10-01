@@ -9,6 +9,10 @@ export const routes: Routes = [
     path: 'welcome',
     loadComponent: () => import('./features/welcome/welcome.component').then((m) => m.WelcomeComponent),
   },
+  {
+    path: 'foods',
+    loadChildren: () => import('./features/food/food.routing').then((m) => m.default),
+  },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: '**',
