@@ -9,105 +9,242 @@
       <div class="search-foods">
         <mat-form-field appearance="outline">
           <mat-label>buscar</mat-label>
-          <input matInput placeholder="comida" autocomplete="off" />
+          <input matInput placeholder="food" autocomplete="off" [(ngModel)]="searchFood" />
           <mat-icon matSuffix>search</mat-icon>
         </mat-form-field>
 
-        <button type="button" mat-raised-button color="primary"><mat-icon>search</mat-icon> Buscar</button>
-        <button type="button" mat-raised-button color="warn"><mat-icon>close</mat-icon> limpar</button>
+        <button type="button" mat-raised-button color="primary" (click)="searchFoods()">
+          <mat-icon>search</mat-icon>Buscar
+        </button>
+        <button type="button" mat-raised-button color="warn" (click)="clear()"><mat-icon>close</mat-icon>Limpar</button>
       </div>
     </section>
   </header>
 
   <mat-divider></mat-divider>
 
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Brasileira</mat-card-title>
-        <mat-card-subtitle>Small</mat-card-subtitle>
-        <img
-          mat-card-sm-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content> Hamburger com batata frita </mat-card-content>
-  </mat-card>
+  <div class="results-info">
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Promoções</mat-card-title>
+          <mat-card-subtitle>Calabresa com azeitona</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://plus.unsplash.com/premium_photo-1672082518029-8619a2c1e9dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZGVzY29udG9zfGVufDB8fDB8fHww"
+            alt="Pizza calabresa com azeitona"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza calabresa com azeitona</mat-card-content>
+    </mat-card>
 
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Small</mat-card-subtitle>
-        <img
-          mat-card-sm-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content> Hamburger com batata frita </mat-card-content>
-  </mat-card>
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Marmita</mat-card-title>
+          <mat-card-subtitle>Queijo com presunto</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://plus.unsplash.com/premium_photo-1701212603113-f47d3310802a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY4fHxjb21pZGElMjBwcm9udGF8ZW58MHx8MHx8fDA%3D"
+            alt="Pizza queijo com presunto"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza queijo com presunto</mat-card-content>
+    </mat-card>
 
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Small</mat-card-subtitle>
-        <img
-          mat-card-sm-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content> Hamburger com batata frita </mat-card-content>
-  </mat-card>
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Lanches</mat-card-title>
+          <mat-card-subtitle>Pizza de Marguerita</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://images.unsplash.com/photo-1576843776838-032ac46fbb93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGhhbWJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Pizza de Marguerita"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content> Pizza de Marguerita </mat-card-content>
+    </mat-card>
 
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Small</mat-card-subtitle>
-        <img
-          mat-card-sm-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content> Hamburger com batata frita </mat-card-content>
-  </mat-card>
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Japonesa</mat-card-title>
+          <mat-card-subtitle>Pizza Napolitana</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://plus.unsplash.com/premium_photo-1694547924505-caf71944b4df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29taWRhJTIwamFwb25lc2F8ZW58MHx8MHx8fDA%3D"
+            alt="Pizza Napolitana"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza Napolitana</mat-card-content>
+    </mat-card>
+  </div>
 
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Small</mat-card-subtitle>
-        <img
-          mat-card-sm-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content> Hamburger com batata frita </mat-card-content>
-  </mat-card>
+  <div class="results-info">
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Doces e Bolos</mat-card-title>
+          <mat-card-subtitle>Calabresa com azeitona</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://plus.unsplash.com/premium_photo-1663133737289-448f4954f042?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJvbG9zfGVufDB8fDB8fHww"
+            alt="Pizza calabresa com azeitona"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza calabresa com azeitona</mat-card-content>
+    </mat-card>
 
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Small</mat-card-subtitle>
-        <img
-          mat-card-sm-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content> Hamburger com batata frita </mat-card-content>
-  </mat-card>
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Salgados</mat-card-title>
+          <mat-card-subtitle>Queijo com presunto</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://media.istockphoto.com/id/2211388500/pt/foto/freshly-baked-savoury-goods.jpg?s=612x612&w=0&k=20&c=hRfXX5Vi6Xhcnm9SZIRmSt0ulrQD75dNb3G4zZ6rI7E="
+            alt="Pizza queijo com presunto"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza queijo com presunto</mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Vegana</mat-card-title>
+          <mat-card-subtitle>Pizza de Marguerita</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://media.istockphoto.com/id/2081512318/pt/foto/vegan-brunch.jpg?s=612x612&w=0&k=20&c=7FQNUxEGh-tZKPDNzZFkDXYJmkZbt6Ddcm0aXQMvQA8="
+            alt="Pizza de Marguerita"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content> Pizza de Marguerita </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Sorvetes</mat-card-title>
+          <mat-card-subtitle>Pizza Napolitana</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://media.istockphoto.com/id/2188918514/pt/foto/ice-cream.jpg?s=612x612&w=0&k=20&c=HRYcLnT_PvP7HXVkVa1OCcfUzAICuYIumZhRXY26RPE="
+            alt="Pizza Napolitana"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza Napolitana</mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="results-info">
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Pastel</mat-card-title>
+          <mat-card-subtitle>Calabresa com azeitona</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://media.istockphoto.com/id/1937977542/pt/foto/chicken-puff-pastry-baked-puff-pastry-stuffed-with-chicken.jpg?s=612x612&w=0&k=20&c=qBxNldni9AJT9jaE8d2_MIsDTsnEDDfBuIy0Jb0Uvtw="
+            alt="Pizza calabresa com azeitona"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza calabresa com azeitona</mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Padarias</mat-card-title>
+          <mat-card-subtitle>Queijo com presunto</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://plus.unsplash.com/premium_photo-1664391899815-b82e21b2e27b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fG1lYXQlMjBjcm9pc3NhbnR8ZW58MHx8MHx8fDA%3D"
+            alt="Pizza queijo com presunto"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza queijo com presunto</mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Italiana</mat-card-title>
+          <mat-card-subtitle>Pizza de Marguerita</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBpenphfGVufDB8fDB8fHww"
+            alt="Pizza de Marguerita"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content> Pizza de Marguerita </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-food" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Chinesa</mat-card-title>
+          <mat-card-subtitle>Pizza Napolitana</mat-card-subtitle>
+          <img
+            class="pizza-image"
+            src="https://media.istockphoto.com/id/1134086327/pt/foto/chinese-take-away-boxes.jpg?s=612x612&w=0&k=20&c=pKyURwkK14xna5iHOaJAMKWCeUma1YkLbdWhnyWKB3c="
+            alt="Pizza Napolitana"
+          />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>Pizza Napolitana</mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <footer>
+    <span class="copy-rights">© 2024 FoodiesApp. All rights reserved.</span>
+
+    <section class="footer-description">
+      <div class="foodiesApp">
+        <p>FoodiesApp</p>
+        <div class="foodiesApp-info">
+          <span>Sobre nós</span>
+          <span>Carreiras</span>
+          <span>Blog</span>
+          <span>Contato</span>
+        </div>
+      </div>
+
+      <div class="Informações">
+        <p>Informações</p>
+        <div class="sub-Informações">
+          <span>Sobre nós</span>
+          <span>Carreiras</span>
+          <span>Blog</span>
+          <span>Contato</span>
+        </div>
+      </div>
+
+      <div class="social-media">
+        <p>Social Media</p>
+        <div class="sub-social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div></div>
+      </div>
+    </section>
+  </footer>
 </main>
