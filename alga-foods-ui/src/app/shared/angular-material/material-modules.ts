@@ -11,7 +11,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
 export const materialModules = [
-  MatDividerModule,
   MatButtonModule,
   MatCardModule,
   MatIconModule,
@@ -23,4 +22,5 @@ export const materialModules = [
   MatPaginatorModule,
   ReactiveFormsModule,
   FormsModule,
+  MatDividerModule,
 ];
