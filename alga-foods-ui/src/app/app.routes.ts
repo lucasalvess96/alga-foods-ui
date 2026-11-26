@@ -7,10 +7,6 @@ export const routes: Routes = [
     loadComponent: () => import('./features/login/login.component').then((m) => m.LoginComponent),
   },
   {
-    path: 'welcome',
-    loadComponent: () => import('./features/welcome/welcome.component').then((m) => m.WelcomeComponent),
-  },
-  {
     path: 'foods',
     canActivate: [canAccessGuard],
     loadChildren: () => import('./features/food/food.routing').then((m) => m.default),
