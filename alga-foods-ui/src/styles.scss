@@ -1,6 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-/* Tema azure-blue.css já está sendo aplicado via angular.json */
-/* decidido usar o tema padrão do angular-material! */
+@use './app/shared/global-style/style' as ui;
+
+@include ui.brand-styles;
+
 body {
-  background-color: #ebeaea;
+  background-color: ui.$color-page;
+  font-family: ui.$font-family-base;
+  font-size: ui.$font-size-body;
+  font-weight: ui.$font-weight-regular;
+  line-height: ui.$line-height-body;
 }
