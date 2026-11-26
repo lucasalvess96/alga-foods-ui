@@ -1,0 +1,29 @@
+@use 'variables' as t;
+
+@mixin flex($justify: flex-start, $align: center, $direction: row, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin typography($size: t.$font-size-body, $weight: t.$font-weight-regular, $line-height: t.$line-height-body) {
+  font-family: t.$font-family-base;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid t.$color-heading;
+    outline-offset: 3px;
+  }
+}
+
+@mixin below($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
