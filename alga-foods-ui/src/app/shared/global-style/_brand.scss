@@ -1,0 +1,21 @@
+@use 'variables' as t;
+@use 'mixins' as m;
+
+@mixin styles {
+  .foodies-brand {
+    @include m.flex($gap: t.$space-xs);
+    color: t.$color-heading;
+    font-weight: t.$font-weight-bold;
+  }
+
+  .foodies-brand__icon {
+    @include m.flex(center);
+    flex: 0 0 t.$size-brand-icon;
+    width: t.$size-brand-icon;
+    height: t.$size-brand-icon;
+    border-radius: t.$radius-circle;
+    background-color: t.$color-brand-accent;
+    font-size: t.$font-size-icon;
+    line-height: 1;
+  }
+}
